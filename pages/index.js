@@ -17,7 +17,7 @@ export default function Home() {
     name: "Discover Our Products",
     description:
       "Browse our curated collection of fashion and lifestyle products.",
-    url: "https://stellar-snickerdoodle-3b7adf.netlify.app/",
+    url: "https://appscrip-task-prashantha-r.netlify.app/",
   };
 
   useEffect(() => {
@@ -60,14 +60,12 @@ export default function Home() {
           content="Browse our curated collection of fashion and lifestyle products."
         />
         <meta property="og:type" content="website" />
-        <meta
-          property="og:url"
-          content="https://stellar-snickerdoodle-3b7adf.netlify.app/"
-        />
-        <meta
-          property="og:image"
-          content="https://stellar-snickerdoodle-3b7adf.netlify.app/og-image.jpg"
-        />
+        <meta 
+          property="og:url" 
+          content="https://appscrip-task-prashantha-r.netlify.app/" />
+        <meta 
+          property="og:image" 
+          content="https://appscrip-task-prashantha-r.netlify.app/og-image.jpg" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
