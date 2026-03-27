@@ -7,8 +7,49 @@ import SortBar from "../components/SortBar";
 import styles from "../styles/Home.module.css";
 
 export async function getStaticProps() {
-  const res = await fetch("https://fakestoreapi.com/products");
-  const products = await res.json();
+  let products = [];
+
+  try {
+    const res = await fetch("https://fakestoreapi.com/products");
+
+    if (!res.ok) {
+      throw new Error("Failed to fetch products");
+    }
+
+    const contentType = res.headers.get("content-type");
+
+    if (!contentType || !contentType.includes("application/json")) {
+      throw new Error("API did not return JSON");
+    }
+
+    products = await res.json();
+  } catch (error) {
+    console.error("Error fetching products:", error);
+
+    // fallback dummy products so Netlify build won't fail
+    products = [
+      {
+        id: 1,
+        title: "Sample Backpack",
+        image: "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
+      },
+      {
+        id: 2,
+        title: "Sample T-Shirt",
+        image: "https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879_.jpg",
+      },
+      {
+        id: 3,
+        title: "Sample Jacket",
+        image: "https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_.jpg",
+      },
+      {
+        id: 4,
+        title: "Sample Bag",
+        image: "https://fakestoreapi.com/img/81Zt42ioCgL._AC_SX679_.jpg",
+      },
+    ];
+  }
 
   return {
     props: {
