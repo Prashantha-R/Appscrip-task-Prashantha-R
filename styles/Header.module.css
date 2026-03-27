@@ -1,0 +1,52 @@
+.header {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.topBar {
+  background: #000;
+  color: #ff5a7b;
+  text-align: center;
+  padding: 8px 0;
+  font-size: 12px;
+}
+
+.headerInner {
+  max-width: 1248px;
+  margin: 0 auto;
+  padding: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.nav {
+  display: flex;
+  gap: 28px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.icons {
+  display: flex;
+  gap: 16px;
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .nav {
+    display: none;
+  }
+
+  .headerInner {
+    padding: 16px;
+  }
+
+  .logo {
+    font-size: 22px;
+  }
+}

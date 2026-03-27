@@ -1,0 +1,50 @@
+.sortBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 0;
+  border-top: 1px solid #e5e5e5;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.leftSection {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.itemsCount {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.hideFilter {
+  border: none;
+  background: transparent;
+  color: #999;
+  text-decoration: underline;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.sortButton {
+  border: none;
+  background: transparent;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .sortBar {
+    padding: 18px 0;
+  }
+
+  .leftSection {
+    gap: 12px;
+  }
+
+  .itemsCount {
+    font-size: 12px;
+  }
+}

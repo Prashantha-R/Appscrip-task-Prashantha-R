@@ -1,0 +1,44 @@
+.card {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.imageWrapper {
+  width: 100%;
+  aspect-ratio: 1 / 1.2;
+  background: #f7f7f7;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.productImage {
+  width: 80%;
+  height: 80%;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.productImage:hover {
+  transform: scale(1.04);
+}
+
+.cardContent {
+  padding-top: 12px;
+}
+
+.productTitle {
+  font-size: 16px;
+  font-weight: 600;
+  color: #252020;
+  margin-bottom: 8px;
+  line-height: 1.4;
+}
+
+.productPrice {
+  font-size: 14px;
+  color: #888792;
+  line-height: 1.5;
+}

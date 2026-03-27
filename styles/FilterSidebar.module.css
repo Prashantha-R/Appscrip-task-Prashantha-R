@@ -1,0 +1,37 @@
+.sidebar {
+  border-right: 1px solid #e5e5e5;
+  padding-right: 24px;
+}
+
+.checkboxRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 24px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.filterItem {
+  border-bottom: 1px solid #e5e5e5;
+  padding: 18px 0;
+}
+
+.filterHeader {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.filterValue {
+  font-size: 12px;
+  color: #777;
+  margin-top: 8px;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    display: none;
+  }
+}
